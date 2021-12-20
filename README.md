@@ -1,2 +1,2 @@
 # maze
-In progress
+It is in progress
