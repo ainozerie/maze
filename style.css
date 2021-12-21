@@ -1,0 +1,40 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+main {
+  display: flex;
+  flex-direction: column;
+}
+.playground, .result {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 612px;
+  height: 612px;
+  border: 2px solid black;
+}
+.spare {
+  width: 100px;
+  height: 100px;
+  background-color: whitesmoke;
+  border: 1px solid black;
+
+}
+.filled {
+  width: 100px;
+  height: 100px;
+  background-color: darkcyan;
+  border: 1px solid black;
+}
+.box {
+  width: 100px;
+  height: 100px;
+  background-color: crimson;
+  border: 1px solid black;
+}
