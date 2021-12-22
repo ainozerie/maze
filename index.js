@@ -7,6 +7,10 @@ let solve = document.querySelector('#solve');
 let resultDisplay = document.querySelector('.result');
 let solveButton = document.querySelector('#solve');
 let generateButton = document.querySelector('#generate');
+let imgMouse = document.createElement('img');
+imgMouse.src = '/img/mouse.png';
+let imgExit = document.createElement('img');
+imgExit.src = '/img/exit.png';
 
 
 // start point is i=0 j=0, end point is i=maze.length-1 j=maze[maze.length-1].length
@@ -30,6 +34,7 @@ let endJ = maze[maze.length - 1].length - 1;
 const createBox = (className) => {
   let newBox = document.createElement('div');
   newBox.classList.add(className);
+  newBox.classList.add('box');
   return newBox;
 };
 
@@ -44,6 +49,12 @@ const drawMaze = () => {
       };
     };
   };
+  // add mouse and exit icons
+  drawPictures();
+};
+const drawPictures = () => {
+  document.querySelector('.box:first-child').appendChild(imgMouse);
+  document.querySelector('.box:last-child').appendChild(imgExit);
 };
 
 // recursive function to find a path
@@ -148,7 +159,7 @@ function printSolution() {
   for (let i = 0; i < maze.length; i++) {
     for (let j = 0; j < maze[i].length; j++) {
       if (maze[i][j] == 8) {
-        playground.appendChild(createBox('box'));
+        playground.appendChild(createBox('path'));
       } else if (maze[i][j] == 0) {
         playground.appendChild(createBox('filled'));
       }
@@ -183,6 +194,7 @@ solveButton.addEventListener('click', () => {
   maze[0][0] = findSolution(maze, 0, 0, 'left');
   playground.textContent = '';
   printSolution();
+  drawPictures();
 });
 
 generateButton.addEventListener('click', () => {
