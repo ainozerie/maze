@@ -1,40 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 * {
   margin: 0;
   padding: 0;
+  font-family: Roboto;
+}
+h1 {
+  color: #FF1654;
+  margin-top: 15px;
 }
 body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-color: #0D1317;
 }
 main {
   display: flex;
-  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15px;
+ 
 }
 .playground, .result {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  width: 612px;
-  height: 612px;
-  border: 2px solid black;
+  width: 324px;
+  height: 324px;
+}
+.display {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 200px;
+  height: 324px;
+  margin-left: 15px;
+}
+button {
+  width: 200px;
+  height: 50px;
+  border-radius: 5px;
+  border: none;
+  margin: 2px;
+  background-color: #FFFFFF;
+  transition: ease-out;
+  transition-duration: 0.2s;
+}
+button:hover {
+  font-size: 16px;
+  background-color: #247BA0;
+}
+#solve:hover {
+    background-color: #4DAA57;
+
 }
 .spare {
-  width: 100px;
-  height: 100px;
-  background-color: whitesmoke;
-  border: 1px solid black;
+  width: 50px;
+  height: 50px;
+  background-color: #FFFFFF;
+  border-radius: 5px;
+  margin: 2px;
 
 }
 .filled {
-  width: 100px;
-  height: 100px;
-  background-color: darkcyan;
-  border: 1px solid black;
+  width: 50px;
+  height: 50px;
+  background-color: #FF1654;
+  border-radius: 5px;
+  margin: 2px;
 }
 .box {
-  width: 100px;
-  height: 100px;
-  background-color: lightgoldenrodyellow;
-  border: 1px solid black;
+  width: 50px;
+  height: 50px;
+  background-color: #4ECDC4;
+  border-radius: 5px;
+  margin: 2px;
 }
