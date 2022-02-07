@@ -1,4 +1,4 @@
-### Counter
+### Maze
 That's a college project.
 
 There is a maze. You can find a route for a mouse to the exit by pressing 'Find path' button if the path exists.
